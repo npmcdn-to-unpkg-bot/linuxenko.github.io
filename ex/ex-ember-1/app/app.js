@@ -9,17 +9,32 @@
 
 	EXEone.Router.map(function() {
 		this.resource('home', { path : '/' });
-		this.resource('controllers');
+		this.resource('post', {path: 'post/:id'})
+		this.resource('posts');
 		this.resource('models');
 	});
 
 
 
+	EXEone.PostsController = Em.Controller.extend({
+		actions : {
+
+		}
+	});
 
 
-
-
-
+	EXEone.PostsRoute = Em.Route.extend({
+		model : function() {
+			return Em.$.ajax({
+				method: 'GET',
+				url: 'http://jsonplaceholder.typicode.com/posts',
+				dataType: 'jsonp'
+			}).then(function(data) {
+				// data. 
+				return data;
+			});
+		}
+	});
 
 
 	EXEone.FooterView = Em.View.create({

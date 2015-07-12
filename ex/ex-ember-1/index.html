@@ -14,7 +14,6 @@
 		<div class="container">
 			{{outlet}}
 		</div>
-	 
 	</script>
 
 
@@ -26,7 +25,22 @@
 				<li>Trying to implement basic dynamic spa application.</li>
 				<li>Implementing routing features.</li>
 				<li>Experimenting with templates, link-to functionality, partials and views.</li>
+				<li>Make custom json request with "editable" data, without adapteurs.</li>
 			</ul>
+		</div>
+	</script>
+
+
+	<script type="text/x-handlebars" data-template-name="post">
+		Json request for post with "param" .. blah blah , it is boring, ill skip it
+	</script>
+
+	<script type="text/x-handlebars" data-template-name="posts">
+		<h2>Posts:</h2>
+		<div class="posts-list">
+		{{#each post in model}}
+			<div class="post-name">{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</div>
+		{{/each}}
 		</div>
 	</script>
 
@@ -49,9 +63,9 @@
 			<div class="navbar navbar-default">
 			  <div class="container-fluid">
 			    <ul class="nav navbar-nav">
-			      <li>{{#link-to 'home' class="navbar-brand"}}<span class="label label-info">Experiment Ember</span>{{/link-to}}</li>
-			      <li>{{#link-to 'controllers' class=""}}Controllers{{/link-to}}</li>
-			      <li>{{#link-to 'models' class=""}}Models{{/link-to}}</li>
+			      {{#link-to 'home' class="navbar-brand" tagName="li"}}<span class="label label-info">Experiment Ember</span>{{/link-to}}
+			      {{#link-to 'posts' class="" tagName="li"}}<a href="#">Posts</a>{{/link-to}}
+			      {{#link-to 'models' class="" tagName="li"}}<a href="#">Models</a>{{/link-to}}
 			    </ul>
 			   </div>
 			</div>
