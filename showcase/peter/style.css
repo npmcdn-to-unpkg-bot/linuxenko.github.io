@@ -41,7 +41,7 @@ html,body {
 
 .wheel-1, .wheel-2, .smog, .pig, .house, .tree, .cloud {
   display: block;
-  background-image : url(../img/petr.png);
+  background-image : url(./petr.png);
   background-repeat: no-repeat;
 }
 
