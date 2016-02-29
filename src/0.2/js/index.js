@@ -1,6 +1,7 @@
 import 'babel-polyfill';
 import AssetManager from './utils/AssetManager';
 import DSC from './screen/dsc';
+import BG from './screen/bg';
 
 
 let bscAssets = {
@@ -12,6 +13,11 @@ function onAssetsLoaded(assets) {
   DSC.getInstance({
     assets : assets,
     canvas : document.getElementById('dsc-logo')
+  });
+
+  BG.getInstance({
+    assets : assets,
+    canvas : document.getElementById('screen-background')
   });
 }
 

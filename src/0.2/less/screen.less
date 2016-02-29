@@ -1,11 +1,18 @@
 .screen-background {
   position: absolute;
   width: 100%;
+  z-index: 1;
 }
 
 section.screen {
+  position: relative;
   height: 100%;
   width: 100%;
+  z-index: 4;
+
+  &:nth-child(3) {
+    border-top: 1px dashed #eee;
+  }
 }
 
 canvas.dsc-screen {
@@ -15,14 +22,9 @@ canvas.dsc-screen {
   z-index: 5;
 }
 
-section.dsc-screen {
-  background: #fff;
-}
-
 
 section.screen.owner-screen {
   display: table;
-  background: #fff;
 
   & > .wrapper {
     display: table-cell;
