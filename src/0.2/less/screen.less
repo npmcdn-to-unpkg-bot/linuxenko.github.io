@@ -1,10 +1,40 @@
-section.screen,
-canvas.screen {
-    height: 100%;
-    width: 100%;
+.screen-background {
+  position: absolute;
+  width: 100%;
 }
 
-canvas.screen {
+section.screen {
+  height: 100%;
+  width: 100%;
+}
+
+canvas.dsc-screen {
+  height: 100%;
+  width: 100%;
   position: relative;
   z-index: 5;
+}
+
+section.dsc-screen {
+  background: #fff;
+}
+
+
+section.screen.owner-screen {
+  display: table;
+  background: #fff;
+
+  & > .wrapper {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+      img {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        padding: 4px;
+        width: 90px;
+      }
+  }
 }
