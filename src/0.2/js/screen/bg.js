@@ -18,7 +18,7 @@ class BG {
     window.addEventListener('resize', this.onResize());
 
   }
-
+/*
   drawBeziers() {
     let wS = this.canvas.width - 10;
     let cL = wS - (Math.random() * 50) - 50;
@@ -38,7 +38,7 @@ class BG {
     this.ctx.bezierCurveTo(cL, 0, cL, 9000, this.canvas.height , 9000);
     this.ctx.stroke();
   }
-
+*/
   drawDot(x,y) {
     if (!!Math.floor(Math.random() * 3)) {
       return;
@@ -69,8 +69,6 @@ class BG {
       for (let x = 0; x < this.canvas.width; x += step) {
         this.drawDot(x,y);
       }
-
-      //this.drawDot(y);
     }
   }
 
@@ -78,11 +76,7 @@ class BG {
   draw() {
       this.ctx.save();
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
       this.drawDots();
-      //this.drawBeziers();
-
-
       this.ctx.restore();
   }
 

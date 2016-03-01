@@ -72,11 +72,14 @@ class DrawableLine {
 
   draw(ctx, w, h, isDraw) {
     if (isDraw) {
+
+      let offset = (w - 800) / 2;
+
       ctx.beginPath();
       ctx.strokeStyle = "#aaa";
-      ctx.lineWidth = 0.4;
-      ctx.moveTo(0, this.h);
-      ctx.lineTo(w, this.h + this.seed);
+      ctx.lineWidth = 4;
+      ctx.moveTo(offset, this.h);
+      ctx.lineTo(w - offset, this.h + this.seed);
       ctx.stroke();
     }
 
@@ -139,13 +142,13 @@ class DscLogo {
   setup () {
     this.drawableLogo = new DrawableLogo(this.assets.logo);
     this.drawableNoise = new DrawableNoise();
-    this.drawableLine1 = new DrawableLine(100, -3, 40);
-  //  this.drawableLine2 = new DrawableLine(90, 20, -20);
+    this.drawableLine1 = new DrawableLine(100, 3, 10);
+  //  this.drawableLine2 = new DrawableLine(300, -5, -40);
   }
 
   onResize() {
     this.canvas.width = window.innerWidth;
-    this.canvas.height = window.innerHeight / 2;
+    this.canvas.height = document.querySelectorAll('section.dsc-screen')[0].offsetHeight;
     return this.onResize.bind(this);
   }
 

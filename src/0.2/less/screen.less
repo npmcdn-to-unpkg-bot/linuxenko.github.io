@@ -6,13 +6,37 @@
 
 section.screen {
   position: relative;
-  height: 50%;
-  min-height: 50%;
+  height: 40%;
+  min-height: 40%;
   width: 100%;
 
   & * {
     position: relative;
     z-index: 100;
+  }
+
+  .content {
+    max-width: 800px;
+    margin: 0px auto;
+    position: relative;
+    text-align: center;
+  }
+
+  .wrapper {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px dotted #000;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px dashed #000;
+    }
   }
 
 }
