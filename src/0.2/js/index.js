@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+//import 'babel-polyfill';   // I can write code even without it :P
 import AssetManager from './utils/AssetManager';
 import DSC from './screen/dsc';
 import BG from './screen/bg';

@@ -1,42 +1,18 @@
 .screen-background {
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 7;
 }
 
 section.screen {
   position: relative;
-  height: 100%;
+  height: 50%;
+  min-height: 50%;
   width: 100%;
-  z-index: 4;
 
-  &:nth-child(3) {
-    border-top: 1px dashed #eee;
+  & * {
+    position: relative;
+    z-index: 100;
   }
-}
 
-canvas.dsc-screen {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  z-index: 5;
-}
-
-
-section.screen.owner-screen {
-  display: table;
-
-  & > .wrapper {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-
-      img {
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 50%;
-        padding: 4px;
-        width: 90px;
-      }
-  }
 }

@@ -1,0 +1,49 @@
+
+section.owner-screen {
+
+  .content {
+    max-width: 800px;
+    margin: 0px auto;
+    position: relative;
+  }
+
+  .specials-background {
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+    margin: 10px 0px;
+    transform: rotate(-10deg);
+    color: #444;
+  }
+}
+
+
+section.screen.owner-screen {
+  display: table;
+
+  & > .wrapper {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+      img {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        padding: 4px;
+        width: 90px;
+      }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section.owner-screen {
+    .specials-background {
+      position: relative;
+      top: 0px;
+      width: 100%;
+      float: left;
+      transform: none;
+    }
+  }
+}
