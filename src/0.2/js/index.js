@@ -5,7 +5,7 @@ import BG from './screen/bg';
 
 
 let bscAssets = {
-  logo : 'assets/img/bsc-logo.png'
+  logo : '/dist/0.2/assets/img/bsc-logo.png'
 };
 
 
