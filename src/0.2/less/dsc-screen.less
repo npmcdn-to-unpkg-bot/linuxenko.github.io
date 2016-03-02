@@ -1,7 +1,9 @@
 canvas.dsc-screen {
   height: 100%;
   width: 100%;
-  position: relative;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   z-index: 10;
 }
 
@@ -25,5 +27,10 @@ section.dsc-screen {
       width: 100%;
       transform: none;
     }
+  }
+
+  canvas.dsc-screen {
+    position: relative;
+    margin-top: 20px;
   }
 }
