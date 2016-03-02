@@ -86,7 +86,7 @@ class BG {
     this.canvas.height = 0;
     let elements = document.querySelectorAll('section.screen');
     for (let i = 0; i < elements.length; i++) {
-      this.canvas.height += elements[i].offsetHeight;
+      this.canvas.height += elements[i].offsetHeight - 2;
     }
 
     this.canvas.width = elements[0].offsetWidth;
