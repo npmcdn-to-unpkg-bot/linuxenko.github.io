@@ -1,4 +1,4 @@
-# Linuxenko.Github.io
+# linuxenko.GitHub.io
 
 Source code of [http://www.linuxenko.pro](http://www.linuxenko.pro).
 
