@@ -4,6 +4,6 @@ Source code of [http://www.linuxenko.pro](http://www.linuxenko.pro).
 
 ## License
 
-GPL
+GPLv3
 
 Copyright © 2014 Svetlana Linuxenko
